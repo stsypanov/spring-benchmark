@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+    id 'maven'
+    id 'application'
+}
+
+group = 'org.tsypanov'
+version = '0.0.1-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+ext {
+//    springVersion = '5.2.0.before'
+//    springVersion = '5.2.0.after'
+    springVersion = '5.2.0.RELEASE'
+    jmhVersion = '1.22'
+}
+
+dependencies {
+    implementation("org.springframework:spring-context:${springVersion}") {
+        exclude module: "commons-logging"
+    }
+    implementation 'org.aspectj:aspectjweaver:1.9.4'
+
+    implementation "org.openjdk.jmh:jmh-core:${jmhVersion}"
+
+    compileOnly "org.openjdk.jmh:jmh-generator-annprocess:${jmhVersion}"
+    annotationProcessor "org.openjdk.jmh:jmh-generator-annprocess:${jmhVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

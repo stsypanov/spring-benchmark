@@ -1,0 +1,28 @@
+Before Spring commit e44d3dab (use Method in fixedInterceptorMap instead of String returned from Method::toString)
+
+Benchmark                                                       Mode  Cnt      Score    Error   Units
+AspectBenchmark.getRandomLong                                   avgt   50     22,877 ±  1,242   us/op
+AspectBenchmark.getRandomLong:·gc.alloc.rate                    avgt   50    747,722 ± 38,464  MB/sec
+AspectBenchmark.getRandomLong:·gc.alloc.rate.norm               avgt   50  18628,016 ± 22,292    B/op
+AspectBenchmark.getRandomLong:·gc.churn.G1_Eden_Space           avgt   50    749,120 ± 38,560  MB/sec
+AspectBenchmark.getRandomLong:·gc.churn.G1_Eden_Space.norm      avgt   50  18663,635 ± 71,630    B/op
+AspectBenchmark.getRandomLong:·gc.churn.G1_Old_Gen              avgt   50      0,002 ±  0,001  MB/sec
+AspectBenchmark.getRandomLong:·gc.churn.G1_Old_Gen.norm         avgt   50      0,052 ±  0,011    B/op
+AspectBenchmark.getRandomLong:·gc.churn.G1_Survivor_Space       avgt   50      0,008 ±  0,027  MB/sec
+AspectBenchmark.getRandomLong:·gc.churn.G1_Survivor_Space.norm  avgt   50      0,240 ±  0,839    B/op
+AspectBenchmark.getRandomLong:·gc.count                         avgt   50   2496,000           counts
+AspectBenchmark.getRandomLong:·gc.time                          avgt   50   1190,000               ms
+
+
+After Spring commit e44d3dab (use Method in fixedInterceptorMap instead of String returned from Method::toString)
+
+Benchmark                                                   Mode  Cnt      Score    Error   Units
+AspectBenchmark.getRandomLong                               avgt   50     15,857 ±  0,226   us/op
+AspectBenchmark.getRandomLong:·gc.alloc.rate                avgt   50    650,381 ±  9,341  MB/sec
+AspectBenchmark.getRandomLong:·gc.alloc.rate.norm           avgt   50  11346,411 ± 29,617    B/op
+AspectBenchmark.getRandomLong:·gc.churn.G1_Eden_Space       avgt   50    651,887 ±  9,375  MB/sec
+AspectBenchmark.getRandomLong:·gc.churn.G1_Eden_Space.norm  avgt   50  11373,150 ± 58,997    B/op
+AspectBenchmark.getRandomLong:·gc.churn.G1_Old_Gen          avgt   50      0,001 ±  0,001  MB/sec
+AspectBenchmark.getRandomLong:·gc.churn.G1_Old_Gen.norm     avgt   50      0,023 ±  0,005    B/op
+AspectBenchmark.getRandomLong:·gc.count                     avgt   50   2252,000           counts
+AspectBenchmark.getRandomLong:·gc.time                      avgt   50   1179,000               ms
