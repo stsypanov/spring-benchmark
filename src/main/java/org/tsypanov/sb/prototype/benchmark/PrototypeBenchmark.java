@@ -1,4 +1,4 @@
-package org.tsypanov.sb.prototype;
+package org.tsypanov.sb.prototype.benchmark;
 
 
 import org.openjdk.jmh.annotations.*;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
 @Fork(jvmArgsAppend = {"-Xms2g", "-Xmx2g"})
-public class ContextBenchmark {
+public class PrototypeBenchmark {
 
   private AnnotationConfigApplicationContext context;
 
@@ -22,7 +22,7 @@ public class ContextBenchmark {
   }
 
   @Benchmark
-  public Object initContext() {
+  public Object newPrototypeBean() {
     return context.getBean(Component.class);
   }
 
