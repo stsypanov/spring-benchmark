@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.MICROSECONDS)
 @Fork(jvmArgsAppend = {"-Xms2g", "-Xmx2g"})
-public class AspectBenchmark {
+public class AspectPrototypeBenchmark {
   private AnnotationConfigApplicationContext context;
 
   @Setup
