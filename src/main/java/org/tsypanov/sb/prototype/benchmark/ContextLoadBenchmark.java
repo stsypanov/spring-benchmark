@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class ContextLoadBenchmark {
 
   @Benchmark
-  public ApplicationContext setup() {
+  public ApplicationContext loadAndCloseContext() {
     try (AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(PrototypeConfig.class)) {
       return context;
     }
