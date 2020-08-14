@@ -1,0 +1,56 @@
+JDK 8
+
+original
+                                       Mode  Cnt      Score     Error   Units
+read                                   avgt  100    122.041 ±   1.286   us/op
+read:·gc.alloc.rate                    avgt  100    264.757 ±   2.681  MB/sec
+read:·gc.alloc.rate.norm               avgt  100  50795.798 ±  13.941    B/op  <<
+read:·gc.churn.PS_Eden_Space           avgt  100    265.543 ±   5.381  MB/sec
+read:·gc.churn.PS_Eden_Space.norm      avgt  100  50958.660 ± 976.843    B/op
+read:·gc.churn.PS_Survivor_Space       avgt  100      0.191 ±   0.029  MB/sec
+read:·gc.churn.PS_Survivor_Space.norm  avgt  100     36.690 ±   5.533    B/op
+read:·gc.count                         avgt  100    787.000            counts
+read:·gc.time                          avgt  100    873.000                ms
+
+patched
+                                       Mode  Cnt      Score     Error   Units
+read                                   avgt  100    119.524 ±   1.171   us/op
+read:·gc.alloc.rate                    avgt  100    226.871 ±   2.189  MB/sec
+read:·gc.alloc.rate.norm               avgt  100  42635.578 ±  10.866    B/op <<
+read:·gc.churn.PS_Eden_Space           avgt  100    227.270 ±   5.083  MB/sec
+read:·gc.churn.PS_Eden_Space.norm      avgt  100  42708.409 ± 852.571    B/op
+read:·gc.churn.PS_Survivor_Space       avgt  100      0.197 ±   0.028  MB/sec
+read:·gc.churn.PS_Survivor_Space.norm  avgt  100     37.063 ±   5.137    B/op
+read:·gc.count                         avgt  100    832.000            counts
+read:·gc.time                          avgt  100    911.000                ms
+
+JDK 11
+
+original
+                                       Mode  Cnt      Score      Error   Units
+read                                   avgt  100    114.142 ±    3.338   us/op
+read:·gc.alloc.rate                    avgt  100    183.482 ±    4.465  MB/sec
+read:·gc.alloc.rate.norm               avgt  100  32761.715 ±   29.115    B/op  <<
+read:·gc.churn.G1_Eden_Space           avgt  100    183.591 ±   12.077  MB/sec
+read:·gc.churn.G1_Eden_Space.norm      avgt  100  32828.788 ± 2166.483    B/op
+read:·gc.churn.G1_Old_Gen              avgt  100      0.002 ±    0.001  MB/sec
+read:·gc.churn.G1_Old_Gen.norm         avgt  100      0.411 ±    0.196    B/op
+read:·gc.count                         avgt  100    185.000             counts
+read:·gc.time                          avgt  100     87.000                 ms
+
+
+patched
+                                       Mode  Cnt      Score      Error   Units
+read                                   avgt  100    108.903 ±    1.281   us/op
+read:·gc.alloc.rate                    avgt  100    144.005 ±    1.686  MB/sec
+read:·gc.alloc.rate.norm               avgt  100  24652.976 ±   32.380    B/op  <<
+read:·gc.churn.G1_Eden_Space           avgt  100    144.694 ±   16.832  MB/sec
+read:·gc.churn.G1_Eden_Space.norm      avgt  100  24744.527 ± 2840.441    B/op
+read:·gc.churn.G1_Old_Gen              avgt  100      0.003 ±    0.004  MB/sec
+read:·gc.churn.G1_Old_Gen.norm         avgt  100      0.533 ±    0.701    B/op
+read:·gc.churn.G1_Survivor_Space       avgt  100      0.133 ±    0.136  MB/sec
+read:·gc.churn.G1_Survivor_Space.norm  avgt  100     22.722 ±   23.243    B/op
+read:·gc.count                         avgt  100    146.000             counts
+read:·gc.time                          avgt  100    118.000                 ms
+
+
