@@ -1,0 +1,25 @@
+before
+
+Benchmark                                                             Mode  Cnt      Score     Error   Units
+AspectPrototypeBenchmark.getAdvisedBean                               avgt  100     14.024 ±   0.164   us/op
+AspectPrototypeBenchmark.getAdvisedBean:·gc.alloc.rate                avgt  100    498.209 ±   4.753  MB/sec
+AspectPrototypeBenchmark.getAdvisedBean:·gc.alloc.rate.norm           avgt  100  10983.307 ±  14.193    B/op
+AspectPrototypeBenchmark.getAdvisedBean:·gc.churn.G1_Eden_Space       avgt  100    498.314 ±  22.655  MB/sec
+AspectPrototypeBenchmark.getAdvisedBean:·gc.churn.G1_Eden_Space.norm  avgt  100  10992.978 ± 505.995    B/op
+AspectPrototypeBenchmark.getAdvisedBean:·gc.churn.G1_Old_Gen          avgt  100      0.001 ±   0.001  MB/sec
+AspectPrototypeBenchmark.getAdvisedBean:·gc.churn.G1_Old_Gen.norm     avgt  100      0.025 ±   0.010    B/op
+AspectPrototypeBenchmark.getAdvisedBean:·gc.count                     avgt  100    327.000            counts
+AspectPrototypeBenchmark.getAdvisedBean:·gc.time                      avgt  100    357.000                ms
+
+after
+
+Benchmark                                                             Mode  Cnt     Score     Error   Units
+AspectPrototypeBenchmark.getAdvisedBean                               avgt  100     8.150 ±   0.202   us/op
+AspectPrototypeBenchmark.getAdvisedBean:·gc.alloc.rate                avgt  100   558.719 ±  11.480  MB/sec
+AspectPrototypeBenchmark.getAdvisedBean:·gc.alloc.rate.norm           avgt  100  7133.664 ±   5.594    B/op
+AspectPrototypeBenchmark.getAdvisedBean:·gc.churn.G1_Eden_Space       avgt  100   560.401 ±  26.718  MB/sec
+AspectPrototypeBenchmark.getAdvisedBean:·gc.churn.G1_Eden_Space.norm  avgt  100  7159.093 ± 316.966    B/op
+AspectPrototypeBenchmark.getAdvisedBean:·gc.churn.G1_Old_Gen          avgt  100     0.001 ±   0.001  MB/sec
+AspectPrototypeBenchmark.getAdvisedBean:·gc.churn.G1_Old_Gen.norm     avgt  100     0.012 ±   0.005    B/op
+AspectPrototypeBenchmark.getAdvisedBean:·gc.count                     avgt  100   330.000            counts
+AspectPrototypeBenchmark.getAdvisedBean:·gc.time                      avgt  100   412.000                ms
