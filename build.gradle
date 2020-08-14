@@ -19,7 +19,7 @@ ext {
 //    springVersion = '5.2.0.after'
 //    springVersion = '5.1.3.RELEASE' //use this for ConcurrentReferenceHashMapBenchmark
     springVersion = '5.2.0.RELEASE'
-    jmhVersion = '1.22'
+    jmhVersion = '1.25'
 }
 
 dependencies {
