@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 @Fork(jvmArgsAppend = {"-Xms2g", "-Xmx2g"})
 public class ConcurrentReferenceHashMapBenchmark {
   @Benchmark
-  public Object findAllByName() {
+  public Object instantiate() {
     return new ConcurrentReferenceHashMap<>();
   }
 }
