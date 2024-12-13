@@ -1,0 +1,21 @@
+Java 17, Spring 6.1.10
+
+Benchmark                                                                     Mode  Cnt     Score      Error   Units
+LazyVsEagerBenchmark.getObjectFromEagerBean                                   avgt    4     0.003 ±    0.004   us/op
+LazyVsEagerBenchmark.getObjectFromEagerBean:·gc.alloc.rate                    avgt    4  3599.039 ± 3042.881  MB/sec
+LazyVsEagerBenchmark.getObjectFromEagerBean:·gc.alloc.rate.norm               avgt    4    16.001 ±    0.001    B/op
+LazyVsEagerBenchmark.getObjectFromEagerBean:·gc.churn.G1_Eden_Space           avgt    4  3720.697 ± 3120.666  MB/sec
+LazyVsEagerBenchmark.getObjectFromEagerBean:·gc.churn.G1_Eden_Space.norm      avgt    4    16.544 ±    1.142    B/op
+LazyVsEagerBenchmark.getObjectFromEagerBean:·gc.churn.G1_Survivor_Space       avgt    4     0.009 ±    0.023  MB/sec
+LazyVsEagerBenchmark.getObjectFromEagerBean:·gc.churn.G1_Survivor_Space.norm  avgt    4    ≈ 10⁻⁴               B/op
+LazyVsEagerBenchmark.getObjectFromEagerBean:·gc.count                         avgt    4    65.000             counts
+LazyVsEagerBenchmark.getObjectFromEagerBean:·gc.time                          avgt    4   817.000                 ms
+LazyVsEagerBenchmark.getObjectFromLazyBean                                    avgt    4     3.440 ±    1.691   us/op
+LazyVsEagerBenchmark.getObjectFromLazyBean:·gc.alloc.rate                     avgt    4   234.220 ±  114.136  MB/sec
+LazyVsEagerBenchmark.getObjectFromLazyBean:·gc.alloc.rate.norm                avgt    4  1056.187 ±  238.798    B/op
+LazyVsEagerBenchmark.getObjectFromLazyBean:·gc.churn.G1_Eden_Space            avgt    4   237.873 ±    5.582  MB/sec
+LazyVsEagerBenchmark.getObjectFromLazyBean:·gc.churn.G1_Eden_Space.norm       avgt    4  1076.823 ±  522.154    B/op
+LazyVsEagerBenchmark.getObjectFromLazyBean:·gc.churn.G1_Survivor_Space        avgt    4     0.001 ±    0.008  MB/sec
+LazyVsEagerBenchmark.getObjectFromLazyBean:·gc.churn.G1_Survivor_Space.norm   avgt    4     0.004 ±    0.034    B/op
+LazyVsEagerBenchmark.getObjectFromLazyBean:·gc.count                          avgt    4     8.000             counts
+LazyVsEagerBenchmark.getObjectFromLazyBean:·gc.time                           avgt    4    10.000                 ms

@@ -1,0 +1,19 @@
+Benchmark                                                               Mode  Cnt     Score      Error   Units
+MixedBenchmark.getObjectFromEagerBean                                   avgt   10     0.002 ±    0.001   us/op
+MixedBenchmark.getObjectFromEagerBean:·gc.alloc.rate                    avgt   10  5372.219 ± 1388.462  MB/sec
+MixedBenchmark.getObjectFromEagerBean:·gc.alloc.rate.norm               avgt   10    16.000 ±    0.001    B/op
+MixedBenchmark.getObjectFromEagerBean:·gc.churn.G1_Eden_Space           avgt   10  5361.756 ± 1393.894  MB/sec
+MixedBenchmark.getObjectFromEagerBean:·gc.churn.G1_Eden_Space.norm      avgt   10    15.980 ±    1.320    B/op
+MixedBenchmark.getObjectFromEagerBean:·gc.churn.G1_Survivor_Space       avgt   10     0.015 ±    0.014  MB/sec
+MixedBenchmark.getObjectFromEagerBean:·gc.churn.G1_Survivor_Space.norm  avgt   10    ≈ 10⁻⁴               B/op
+MixedBenchmark.getObjectFromEagerBean:·gc.count                         avgt   10    83.000             counts
+MixedBenchmark.getObjectFromEagerBean:·gc.time                          avgt   10   189.000                 ms
+MixedBenchmark.getObjectFromLazyBean                                    avgt   10     1.173 ±    0.166   us/op
+MixedBenchmark.getObjectFromLazyBean:·gc.alloc.rate                     avgt   10   556.064 ±   81.010  MB/sec
+MixedBenchmark.getObjectFromLazyBean:·gc.alloc.rate.norm                avgt   10  1024.149 ±   50.997    B/op
+MixedBenchmark.getObjectFromLazyBean:·gc.churn.G1_Eden_Space            avgt   10   551.972 ±  126.085  MB/sec
+MixedBenchmark.getObjectFromLazyBean:·gc.churn.G1_Eden_Space.norm       avgt   10  1017.654 ±  206.415    B/op
+MixedBenchmark.getObjectFromLazyBean:·gc.churn.G1_Survivor_Space        avgt   10     0.002 ±    0.003  MB/sec
+MixedBenchmark.getObjectFromLazyBean:·gc.churn.G1_Survivor_Space.norm   avgt   10     0.004 ±    0.005    B/op
+MixedBenchmark.getObjectFromLazyBean:·gc.count                          avgt   10    28.000             counts
+MixedBenchmark.getObjectFromLazyBean:·gc.time                           avgt   10    55.000                 ms
